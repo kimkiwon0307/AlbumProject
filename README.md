@@ -31,16 +31,19 @@ Data-Base
 ## 주요기능
 
 ### * 회원가입 - 중복검사(AJAX 사용)
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3ab81e94-1bd8-4001-b52a-b7450c1c22c8/25d08821-35c2-49f7-82ed-8c76a7ac0131/Untitled.png)
+![image](https://github.com/kimkiwon0307/AlbumProject/assets/46276548/1fa9c645-acb2-4703-8343-be139fa4e44c)
 
 ### * 앨범 - 이미지 썸네일 미리보기
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3ab81e94-1bd8-4001-b52a-b7450c1c22c8/b99fd7be-63a7-4a0c-bdc9-5e6cd5305172/Untitled.png)
+![image](https://github.com/kimkiwon0307/AlbumProject/assets/46276548/00d46645-aedb-40be-ab4b-3effa1cce2a6)
 
 ### * 자유게시판 - 페이징,  댓글
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3ab81e94-1bd8-4001-b52a-b7450c1c22c8/02044675-8e37-4993-8b59-6c28333127d9/Untitled.png)
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3ab81e94-1bd8-4001-b52a-b7450c1c22c8/8cd98439-ec44-4e31-954c-927424c6fefe/Untitled.png)
+![image](https://github.com/kimkiwon0307/AlbumProject/assets/46276548/c97f7758-0a2b-4dc9-b128-34f637d30060)
+
+![image](https://github.com/kimkiwon0307/AlbumProject/assets/46276548/89be9a0d-272d-47b6-9080-4b3f1b005c94)
+
 
 ### * 공통기능 - vaildation
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3ab81e94-1bd8-4001-b52a-b7450c1c22c8/df0d875a-02b7-4cd1-b69d-91afd87cac64/Untitled.png)
+![image](https://github.com/kimkiwon0307/AlbumProject/assets/46276548/ff9e37d9-4ede-43e7-9783-379572df708c)
+
 
 감사합니다.
