@@ -1,0 +1,54 @@
+@charset "UTF-8";
+#container {
+  text-align: center;
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+#rBtn{
+	float:right; 
+	margin-bottom:10px;
+}
+.number-header {
+    width: 3%;
+}
+
+.title-header {
+    width: 30%;
+}
+
+.name-header {
+    width: 8%;
+}
+
+.date-header {
+    width: 5%;
+}
+
+.views-header {
+    width: 5%;
+}
+
+.likes-header {
+    width: 5%;
+}
+
+.move{
+	
+	text-decoration: none; 
+	color:black; 
+	text-decoration-line:none;
+	
+}
+
+.custom-nav{
+	margin-left:495px;
+}
+
+.py-5 bg-dark{
+	
+}

@@ -1,0 +1,13 @@
+footer{
+ position: absolute; 
+ bottom:0px; 
+ width:100%;
+}
+
+.container.px-4.px-lg-5.mt-5{
+	height:30px;
+}
+
+#Rbtn{
+float:right;
+}

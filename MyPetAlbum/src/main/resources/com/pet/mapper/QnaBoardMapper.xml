@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- mapper DTD 선언 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace ="com.pet.mapper.QnaBoardMapper">
+  
+  
+  
+ <!--  고객센터 목록  -->
+  <select id="getList" resultType="com.pet.domain.QnaBoardVO">
+  <![CDATA[
+  		select * from tbl_qnaBoard where q_no > 0
+  ]]>
+  </select>
+
+<!-- 고객센터 저장 -->
+  <insert id="insert"> 
+  		
+  		<selectKey keyProperty="q_no" order="BEFORE" resultType="long">
+  				select seq_qnaBoard.nextval from dual
+  		</selectKey>
+  
+  		insert into tbl_qnaBoard(q_no, q_title, q_content, q_writer) 
+  		values (#{q_no}, #{q_title}, #{q_content}, #{q_writer} )
+  		
+  </insert>
+
+  <select id="read" resultType="com.pet.domain.QnaBoardVO">
+  			select * from tbl_qnaBoard where q_no = #{q_no}  
+  </select>
+  
+  <update id="update">
+  		update tbl_qnaBoard
+  		set q_content=#{q_content}, q_writer=#{q_writer}, q_udate=sysdate
+  		where q_no = #{q_no}
+ 
+  </update>
+  
+
+  <delete id="delete">
+  		delete tbl_qnaBoard where q_no = #{q_no}
+  </delete>
+  
+
+  </mapper>

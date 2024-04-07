@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- mapper DTD 선언 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace ="com.pet.mapper.AlbumBoardMapper">
+  
+  
+  
+ <!--  앨범 목록  -->
+  <select id="getList" resultType="com.pet.domain.AlbumBoardVO">
+  <![CDATA[
+  		select * from tbl_albumBoard where a_no > 0
+  ]]>
+  </select>
+  
+<!-- 앨범 저장 -->
+  <insert id="insert"> 
+  		
+  		<selectKey keyProperty="a_no" order="BEFORE" resultType="long">
+  				select seq_albumBoard.nextval from dual
+  		</selectKey>
+  
+  		insert into tbl_albumBoard(a_no, a_title, a_content, a_writer) 
+  		values (#{a_no}, #{a_title}, #{a_content}, #{a_writer} )
+  		
+  </insert>
+
+<!--   <select id="read" resultType="com.pet.domain.AlbumBoardVO">
+  			select * from tbl_albumBoard where a_no = #{a_no}  
+  </select> -->
+  
+<!--   
+  <select id="read" resultType="com.pet.domain.AlbumBoardVO">
+  			select * from tbl_albumboard a left outer join tbl_attach b on a.a_no = b.a_no  where a.a_no = b.a_no
+  </select>
+   -->
+
+<select id="read" resultType="com.pet.domain.AlbumBoardVO">
+    SELECT a.*, b.* FROM tbl_albumboard a
+    LEFT OUTER JOIN tbl_attach b ON a.a_no = b.a_no
+    WHERE a.a_no = #{a_no}
+</select>
+
+  
+  <update id="update">
+  		update tbl_albumBoard
+  		set a_content=#{a_content}, a_writer=#{a_writer}, a_udate=sysdate
+  		where a_no = #{a_no}
+ 
+  </update>
+  
+
+
+  <delete id="delete">
+  		delete tbl_albumBoard where a_no = #{a_no}
+  </delete>
+  
+
+  
+  
+  </mapper>
