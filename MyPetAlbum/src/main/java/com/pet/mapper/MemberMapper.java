@@ -25,6 +25,7 @@ public interface MemberMapper {
 	
 	// 로그인
 	public MemberVO Login(@Param("m_id")String m_id, @Param("m_pwd")String m_pwd);
-
+	
+	public MemberVO idCheck(String m_id);
 	
 }

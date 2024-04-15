@@ -55,6 +55,11 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.Login(m_id, m_pwd);
 	}
 
+	@Override
+	public MemberVO idCheck(String m_id) {
+		return mapper.idCheck(m_id);
+	}
+
 
 
 }

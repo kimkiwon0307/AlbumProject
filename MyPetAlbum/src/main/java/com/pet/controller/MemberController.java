@@ -3,23 +3,33 @@ package com.pet.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.pet.domain.Criteria;
 import com.pet.domain.MemberVO;
 import com.pet.service.MemberService;
 
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
 @Controller
@@ -133,6 +143,24 @@ public class MemberController {
 			return "success";
 		}
 	 }
-	  
 	
+		//아이디 패스워드 일치 체크
+		@PostMapping("/m_id_check")
+		@ResponseBody
+		public ResponseEntity<String> m_id_check(@RequestParam("loginId") String loginId,@RequestParam("password") String password) {
+			
+			
+			System.out.println(service.idCheck(loginId).getM_pwd().equals(password));
+			System.out.println(password);
+			System.out.println(service.idCheck(loginId).getM_pwd());
+			
+			return service.idCheck(loginId).getM_pwd().equals(password)
+				 ? new ResponseEntity<>("success", HttpStatus.OK)
+				 : new ResponseEntity<>("fail", HttpStatus.FAILED_DEPENDENCY);
+			
+		}
+		
+	
+	
+
 }

@@ -109,7 +109,7 @@ public class FreeBoardController {
 	  @PostMapping("/count")
 	  @ResponseBody
 	  public void count(@RequestParam Long f_no){
-		  
+		  System.out.println("여기니?" + f_no);
 		  service.count(f_no);
 		  
 	  }

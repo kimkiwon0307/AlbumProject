@@ -106,6 +106,8 @@
 			$(".move").on("click",function(e){
 				e.preventDefault();
 				
+				alert("hi");
+				
 				var f_no = $(this).attr("href");
 				
 				$.ajax({

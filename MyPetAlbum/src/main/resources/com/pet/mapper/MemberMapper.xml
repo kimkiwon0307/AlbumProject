@@ -53,7 +53,10 @@
 	<select id="Login" resultType="com.pet.domain.MemberVO">
 		select * from tbl_member where m_id = #{m_id} and m_pwd = #{m_pwd}
 	</select>
-  
+  	
+  	<select id="idCheck" resultType="com.pet.domain.MemberVO">
+  		select * from tbl_member where m_id = #{m_id}
+  	</select>
   
   
   

@@ -21,4 +21,6 @@ public interface MemberService {
 	
 	public MemberVO login(String m_id, String m_pwd);
 	
+	public MemberVO idCheck(String m_id);
+	
 }
